@@ -1,5 +1,6 @@
 /*
  * Original Source: Copyright 2019 - 2020, RC4ML, Zhejiang University, https://github.com/RC4ML/Shuhai
+ * Modifications: Austin York, University of California, Davis
  *
  * This hardware operator is free software: you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published
