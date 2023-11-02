@@ -83,7 +83,7 @@ begin
     m_axi_AWID     <= {ID_WIDTH{1'b0}};
     m_axi_AWLEN    <= {LEN_WIDTH{1'b0}}; // 1-1 length, 1 beat
     m_axi_AWSIZE   <= (DATA_WIDTH == 256)? 3'b101:3'b110; //just for 256-bit or 512-bit.
-    m_axi_AWBURST  <= 2'b00;   // INC (01), FIXED (00)
+    m_axi_AWBURST  <= 2'b01;   // INC (01), FIXED (00)
     m_axi_AWLOCK   <= 2'b00;   // Normal memory operation
     m_axi_AWCACHE  <= 4'b0000; // 4'b0011; // Normal, non-cacheable, modifiable, bufferable (Xilinx recommends)
     m_axi_AWPROT   <= 3'b010;  // 3'b000;  // Normal, secure, data
