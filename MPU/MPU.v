@@ -224,7 +224,6 @@ end
 ReductionEngine #(.VPropWidth  (VPropWidth  ), 
 		  .EDegreeWidth(EDegreeWidth)) 
 inst_ReductionEngine(
-	.resetn     (resetn       ), 
 	.control    (control_reg  ), 
 	.old_temp_p (old_temp_prop), 
 	.old_p      (old_prop     ), 
@@ -243,7 +242,6 @@ module ReductionEngine #(
 	parameter VPropWidth   = 32,
 	parameter EDegreeWidth = 32
 )(
-	input 		              resetn,      // negative reset
 	input 	                [1:0] control,     // graph vertex calculation
 	input      [VPropWidth - 1:0] old_temp_p,  // old temp prop
 	input      [VPropWidth - 1:0] old_p,       // old prop
@@ -253,24 +251,18 @@ module ReductionEngine #(
 	output reg [VPropWidth - 1:0] temp_result, // temp vertex prop result
 	output reg                    active       // determine to update vertex
 );
-
+wire BFS_Check;
+assign BFS_Check = ((new_v < old_temp_p) && (old_degree > 0));
+	
 always @(*)
-begin
-if(~resetn)
-begin
-	result      = {VPropWidth{1'b0}};
-	temp_result = {VPropWidth{1'b0}};
-	active      = 1'b0;
-end
-else
 begin
 case(control)
 
 2'b10: // MIN new_v <= old_temp_p (BFS) (SSSP)
 begin
-	result      = ((new_v < old_temp_p) && (old_degree > 0)) ? new_v : old_p;
-	temp_result = ((new_v < old_temp_p) && (old_degree > 0)) ? new_v : old_temp_p;
-	active      = ((new_v < old_temp_p) && (old_degree > 0)) ? 1'b1 : 1'b0;
+	result      = BFS_Check ? new_v : old_p;
+	temp_result = BFS_Check ? new_v : old_temp_p;
+	active      = BFS_Check ? 1'b1 : 1'b0;
 end
 
 default:
