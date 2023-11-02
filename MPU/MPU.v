@@ -222,15 +222,23 @@ begin
 end
 end
 
-ReductionEngine #(.VPropWidth(VPropWidth), .EDegreeWidth(EDegreeWidth)) 
-inst_ReductionEngine(.resetn(resetn), .control(control_reg), .old_temp_p(old_temp_prop), .old_p(old_prop), .old_degree(old_degree), 
-.new_v(new_value), .result(result), .temp_result(temp_result), .active(active));
-
-
+ReductionEngine #(.VPropWidth  (VPropWidth  ), 
+		  .EDegreeWidth(EDegreeWidth)) 
+inst_ReductionEngine(
+	.resetn     (resetn       ), 
+	.control    (control_reg  ), 
+	.old_temp_p (old_temp_prop), 
+	.old_p      (old_prop     ), 
+	.old_degree (old_degree   ), 
+	.new_v      (new_value    ), 
+	.result     (result       ), 
+	.temp_result(temp_result  ), 
+	.active     (active       )
+);
 endmodule
 
 //=====================================
-//			Reduction Engine
+//         Reduction Engine
 //=====================================
 module ReductionEngine #(
 	parameter VPropWidth   = 32,
