@@ -27,12 +27,11 @@ module MPU #(
 	parameter DataWidth    = 256, // HBM data width
 	parameter UpdateWidth  = 65   // Input message width
 )(
-	
-	input 						 clk,          // should be 450 MHz
-	input 						 resetn,       // negative reset
+	input                        clk,          // should be 450 MHz
+	input                        resetn,       // negative reset
 	//----------------------Message Signals----------------------//
 	input    [UpdateWidth - 1:0] update,       // vertex update message
-	input 						 update_ready, // message available
+	input                        update_ready, // message available
 	output reg                   update_resp,  // message received
 	input                  [1:0] control,      // ALU Control (graph type)
 
@@ -41,29 +40,29 @@ module MPU #(
 	input	   [DataWidth - 1:0] read_data,     // old vertex data
 	output reg [AddrWidth - 1:0] write_addr,    // updated vertex address, same as old
 	output reg [DataWidth - 1:0] write_data,    // updated vertex data
-	output reg					 start_rd,      // start read
-	output reg					 start_wr,      // start write
-	input						 end_rd,        // finished read
-	input						 end_wr,        // finished write
+	output reg                   start_rd,      // start read
+	output reg                   start_wr,      // start write
+	input                        end_rd,        // finished read
+	input                        end_wr,        // finished write
 	
 	//----------------------Update to MGU----------------------//
 	output reg [VPropWidth+EIndexWidth+EDegreeWidth:0] MGU_data, // {VertexProp, Edge Addr, Edge Range}
 	output reg                   MGU_ready,     // MGU data is ready for MGU to ready
-	input                        MGU_resp
+	input                        MGU_resp       // MGU response
 );
 
-reg [UpdateWidth - 1:0] update_reg;        // Store message
-reg               [1:0] control_reg;       // Store control
-reg  [VPropWidth - 1:0] old_temp_prop;     // decoded old temp vertex value
-reg  [VPropWidth - 1:0] old_prop;          // decoded old vertex value
-reg  [VPropWidth - 1:0] new_value;         // decoded new vertex value
-wire [VPropWidth - 1:0] result;            // result of update
-wire 	                active;            // decide to update vertex
-reg   [DataWidth - 1:0] store_read_data;   // store old vertices
-reg     [EIndexWidth:0] edge_index;        // Base address of edge
-reg    [EDegreeWidth:0] edge_degree;       // Number of edges = edge degree
-reg    [EDegreeWidth:0] old_degree;        // Old Edge Degree
-reg                     start_send;        // start sending data to MGU
+reg [UpdateWidth - 1:0] update_reg;      // Store message
+reg               [1:0] control_reg;     // Store control
+reg  [VPropWidth - 1:0] old_temp_prop;   // decoded old temp vertex value
+reg  [VPropWidth - 1:0] old_prop;        // decoded old vertex value
+reg  [VPropWidth - 1:0] new_value;       // decoded new vertex value
+wire [VPropWidth - 1:0] result;          // result of update
+wire 	                active;          // decide to update vertex
+reg   [DataWidth - 1:0] store_read_data; // store old vertices
+reg     [EIndexWidth:0] edge_index;      // Base address of edge
+reg    [EDegreeWidth:0] edge_degree;     // Number of edges = edge degree
+reg    [EDegreeWidth:0] old_degree;      // Old Edge Degree
+reg                     start_send;      // start sending data to MGU
 
 
 assign edge_index  = store_read_data[(EIndexWidth+EDegreeWidth-1):(EIndexWidth)];
