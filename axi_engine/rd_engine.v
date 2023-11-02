@@ -77,7 +77,7 @@ begin
     m_axi_ARID     <= {ID_WIDTH{1'b0}};
     m_axi_ARLEN    <= {LEN_WIDTH{1'b0}}; // 1-1 length, 1 burst
     m_axi_ARSIZE   <= (DATA_WIDTH==256)? 3'b101:3'b110; // 256-bit or 512-bit.
-    m_axi_ARBURST  <= 2'b00;   // INC, not FIXED (00)
+    m_axi_ARBURST  <= 2'b01;   // INC, not FIXED (00)
     m_axi_ARLOCK   <= 2'b00;   // Normal memory operation
     m_axi_ARCACHE  <= 4'b0000; // 4'b0011: Normal, non-cacheable, modifiable, bufferable (Xilinx recommends)
     m_axi_ARPROT   <= 3'b010;  // 3'b000: Normal, secure, data
