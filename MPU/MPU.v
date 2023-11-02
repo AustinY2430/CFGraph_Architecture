@@ -149,7 +149,7 @@ begin
 		if (active) 
 		begin
 			write_data  <= {store_read_data[(DataWidth-1):(DataWidth/2)], temp_result, result, store_read_data[(VPropStart-1):0]}; // Position new vertex value correctly
-			write_addr  <= update_reg[(UpdateWidth-1):(UpdateWidth-AddrWidth)]; // Pass same address as read
+			write_addr  <= read_addr; // Pass same address as read
 			start_send  <= 1'b1;
 			state       <= WRITE;
 		end
