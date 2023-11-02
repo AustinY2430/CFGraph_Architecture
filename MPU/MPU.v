@@ -150,7 +150,6 @@ begin
 		begin
 			write_data  <= {store_read_data[(DataWidth-1):(DataWidth/2)], temp_result, result, store_read_data[(VPropStart-1):0]}; // Position new vertex value correctly
 			write_addr  <= read_addr; // Pass same address as read
-			start_send  <= 1'b1;
 			state       <= WRITE;
 		end
 		else state          <= IDLE;
@@ -159,12 +158,14 @@ begin
 	WRITE:        // Write back updated vertex
 	begin
 		start_wr            <= 1'b1;
+		start_send          <= 1'b1;
 		state               <= WRITE_WAIT;
 	end
 
 	WRITE_WAIT:   // Wait for write to finish
 	begin
 		start_wr            <= 1'b0;
+		start_send          <= 1'b0;
 		if (end_wr) begin
 			state       <= IDLE;
 		end
@@ -198,7 +199,7 @@ begin
 
     MGU_WAIT:
     begin
-        if(active & start_send)
+        if(start_send)
         begin
             MGU_data  <= {result, edge_index, edge_degree};
             MGU_ready <= 1'b1;
