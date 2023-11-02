@@ -111,7 +111,7 @@ begin
 	begin
 		if(update_ready) // Update is ready to read
 		begin
-		    control_reg     <= control; // Reduction Engine AddrWidth
+		    control_reg     <= control; // Reduction Engine
 		    update_resp     <= 1'b1;
 		    update_reg      <= update;
 		    state           <= READ;
@@ -120,14 +120,14 @@ begin
 
 	READ:         // Read Old Vertices from HBM
 	begin
-		start_rd            <= 1'b1;
-		read_addr           <= update_reg[(UpdateWidth-1):(UpdateWidth-AddrWidth)];
+		start_rd            <= 1'b1; // Start read
+		read_addr           <= update_reg[(UpdateWidth-1):(UpdateWidth-AddrWidth)]; // Left half is address
 		state               <= READ_WAIT;
 	end
 
 	READ_WAIT:    // Wait for read to complete
 	begin
-	    update_resp         <= 1'b0;
+	    	update_resp         <= 1'b0;
 		start_rd            <= 1'b0;
 		if (end_rd)
 		begin
@@ -149,10 +149,10 @@ begin
 	begin
 		if (active) 
 		begin
-			write_data      <= {store_read_data[(DataWidth-1):(DataWidth/2)], temp_result, result, store_read_data[(VPropStart-1):0]}; // Position new vertex value correctly
-			write_addr      <= update_reg[(UpdateWidth-1):(UpdateWidth-AddrWidth)]; // Pass same address as read
-			start_send      <= 1'b1;
-			state           <= WRITE;
+			write_data  <= {store_read_data[(DataWidth-1):(DataWidth/2)], temp_result, result, store_read_data[(VPropStart-1):0]}; // Position new vertex value correctly
+			write_addr  <= update_reg[(UpdateWidth-1):(UpdateWidth-AddrWidth)]; // Pass same address as read
+			start_send  <= 1'b1;
+			state       <= WRITE;
 		end
 		else state          <= IDLE;
 	end
@@ -167,7 +167,7 @@ begin
 	begin
 		start_wr            <= 1'b0;
 		if (end_wr) begin
-			state           <= IDLE;
+			state       <= IDLE;
 		end
 	end
 
@@ -207,6 +207,7 @@ begin
         end
         else MGU_data <= 96'd0;
     end
+	    
     MGU_RESP:
     begin
         if (MGU_resp) 
@@ -235,9 +236,9 @@ module ReductionEngine #(
 	parameter VPropWidth   = 32,
 	parameter EDegreeWidth = 32
 )(
-	input 		                  resetn,      // negative reset
+	input 		              resetn,      // negative reset
 	input 	                [1:0] control,     // graph vertex calculation
-	input      [VPropWidth - 1:0] old_temp_p,   // old temp prop
+	input      [VPropWidth - 1:0] old_temp_p,  // old temp prop
 	input      [VPropWidth - 1:0] old_p,       // old prop
 	input    [EDegreeWidth - 1:0] old_degree,  // old edge degree
 	input      [VPropWidth - 1:0] new_v,       // new value
