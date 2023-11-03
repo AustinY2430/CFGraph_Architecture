@@ -95,8 +95,16 @@ reg start_wr_reg, start_rd_reg;
 
 always @(posedge clk) 
 begin
-    start_wr_reg <= start_wr;
-    start_rd_reg <= start_rd;     
+    if (~resetn) 
+        begin
+            start_wr_reg <= 1'b0;
+            start_rd_reg <= 1'b0;
+        end
+    else
+        begin
+            start_wr_reg <= start_wr;
+            start_rd_reg <= start_rd;
+        end
 end
 
 wr_engine #(
