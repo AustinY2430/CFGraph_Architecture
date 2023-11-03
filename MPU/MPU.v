@@ -85,21 +85,15 @@ always @(posedge clk)
 begin
 if(~resetn)
 begin
-	state           <= IDLE;
-	new_value       <= {VPropWidth{1'b0}};
-	old_prop        <= {VPropWidth{1'b0}};
-	old_temp_prop   <= {VPropWidth{1'b0}};
-	old_degree      <= {EDegreeWidth{1'b0}};
 	read_addr       <= {AddrWidth{1'b0}};
 	write_addr      <= {AddrWidth{1'b0}};
 	write_data      <= {DataWidth{1'b0}};
-	update_reg      <= {UpdateWidth{1'b0}};
-	store_read_data <= {DataWidth{1'b0}};
 	start_rd        <= 1'b0;
 	start_wr        <= 1'b0;
 	update_resp     <= 1'b0;
 	control_reg     <= 2'b00;
 	start_send      <= 1'b0;
+	state           <= IDLE;
 end
 else
 begin
@@ -188,7 +182,6 @@ always @(posedge clk)
 begin
 if(~resetn)
 begin
-    MGU_data  <= 96'd0;
     MGU_ready <= 1'b0;
     state_a   <= MGU_WAIT;
 end
