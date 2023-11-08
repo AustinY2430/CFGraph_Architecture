@@ -406,7 +406,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>16a670b2</spirit:value>
+            <spirit:value>973c011f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -422,7 +422,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>16a670b2</spirit:value>
+            <spirit:value>973c011f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1303,7 +1303,7 @@
       <spirit:file>
         <spirit:name>axi_engine.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_7ad6542c</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_e1b39c4c</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1397,14 +1397,14 @@
       </xilinx:taxonomies>
       <xilinx:displayName>axi_engine_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>14</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-10-26T21:03:09Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>15</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-11-08T21:53:58Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5a9b23da"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="b7e95b93"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="35db6c04"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="986706f7"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="7f61e739"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d092b4fb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="3e180a61"/>

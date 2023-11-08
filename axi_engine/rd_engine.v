@@ -136,7 +136,7 @@ begin
             else guard_ARVALID <= 1'b1;
         end
         
-        RD_DATA: // Read Data and Check Response
+        RD_DATA: // Read Data and Check Response (IMPORTANT! ONLY 1 BURST)
         begin
             if (m_axi_RLAST & m_axi_RVALID & resp) // Last read and successful
             begin
