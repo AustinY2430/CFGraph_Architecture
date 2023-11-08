@@ -1,0 +1,446 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5D53316A91091DB6",
+      "device": "xcu280-fsvh2892-2L-e",
+      "gen_directory": "../../../../AXIChecker.gen/sources_1/bd/axi_checker",
+      "name": "axi_checker",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axi_vip_0": "",
+      "axi_crossbar_0": "",
+      "axi_engine_0": "",
+      "axi_engine_1": ""
+    },
+    "ports": {
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "resetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "axi_checker_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "resetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "start_rd": {
+        "direction": "I"
+      },
+      "start_wr": {
+        "direction": "I"
+      },
+      "end_wr": {
+        "direction": "O"
+      },
+      "end_rd": {
+        "direction": "O"
+      },
+      "write_addr": {
+        "direction": "I",
+        "left": "32",
+        "right": "0"
+      },
+      "read_addr": {
+        "direction": "I",
+        "left": "32",
+        "right": "0"
+      },
+      "write_data": {
+        "direction": "I",
+        "left": "255",
+        "right": "0"
+      },
+      "read_data": {
+        "direction": "O",
+        "left": "255",
+        "right": "0"
+      },
+      "d_start_wr": {
+        "direction": "I"
+      },
+      "d_start_rd": {
+        "direction": "I"
+      },
+      "d_write_addr": {
+        "direction": "I",
+        "left": "32",
+        "right": "0"
+      },
+      "d_read_addr": {
+        "direction": "I",
+        "left": "32",
+        "right": "0"
+      },
+      "d_write_data": {
+        "direction": "I",
+        "left": "255",
+        "right": "0"
+      },
+      "d_end_wr": {
+        "direction": "O"
+      },
+      "d_end_rd": {
+        "direction": "O"
+      },
+      "d_read_data": {
+        "direction": "O",
+        "left": "255",
+        "right": "0"
+      }
+    },
+    "components": {
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "axi_checker_axi_vip_0_0",
+        "xci_path": "ip/axi_checker_axi_vip_0_0/axi_checker_axi_vip_0_0.xci",
+        "inst_hier_path": "axi_vip_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "33"
+          },
+          "DATA_WIDTH": {
+            "value": "256"
+          },
+          "INTERFACE_MODE": {
+            "value": "SLAVE"
+          }
+        }
+      },
+      "axi_crossbar_0": {
+        "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
+        "xci_name": "axi_checker_axi_crossbar_0_0",
+        "xci_path": "ip/axi_checker_axi_crossbar_0_0/axi_checker_axi_crossbar_0_0.xci",
+        "inst_hier_path": "axi_crossbar_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "33"
+          },
+          "DATA_WIDTH": {
+            "value": "256"
+          },
+          "ID_WIDTH": {
+            "value": "6"
+          },
+          "NUM_MI": {
+            "value": "1"
+          },
+          "NUM_SI": {
+            "value": "2"
+          },
+          "S00_READ_ACCEPTANCE": {
+            "value": "1"
+          },
+          "S00_WRITE_ACCEPTANCE": {
+            "value": "1"
+          },
+          "S01_BASE_ID": {
+            "value": "0x00000020"
+          },
+          "S01_READ_ACCEPTANCE": {
+            "value": "1"
+          },
+          "S01_WRITE_ACCEPTANCE": {
+            "value": "1"
+          },
+          "S02_BASE_ID": {
+            "value": "0x00000040"
+          },
+          "S03_BASE_ID": {
+            "value": "0x00000060"
+          },
+          "S04_BASE_ID": {
+            "value": "0x00000080"
+          },
+          "S05_BASE_ID": {
+            "value": "0x000000a0"
+          },
+          "S06_BASE_ID": {
+            "value": "0x000000c0"
+          },
+          "S07_BASE_ID": {
+            "value": "0x000000e0"
+          },
+          "S08_BASE_ID": {
+            "value": "0x00000100"
+          },
+          "S09_BASE_ID": {
+            "value": "0x00000120"
+          },
+          "S10_BASE_ID": {
+            "value": "0x00000140"
+          },
+          "S11_BASE_ID": {
+            "value": "0x00000160"
+          },
+          "S12_BASE_ID": {
+            "value": "0x00000180"
+          },
+          "S13_BASE_ID": {
+            "value": "0x000001a0"
+          },
+          "S14_BASE_ID": {
+            "value": "0x000001c0"
+          },
+          "S15_BASE_ID": {
+            "value": "0x000001e0"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "S01_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M00_AXI"
+            ]
+          }
+        }
+      },
+      "axi_engine_0": {
+        "vlnv": "user.org:user:axi_engine:1.0",
+        "xci_name": "axi_checker_axi_engine_0_0",
+        "xci_path": "ip/axi_checker_axi_engine_0_0/axi_checker_axi_engine_0_0.xci",
+        "inst_hier_path": "axi_engine_0",
+        "interface_ports": {
+          "m_axi": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "m_axi",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0x0001FFFFFFFF",
+              "width": "33"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "m_axi": {
+              "range": "8G",
+              "width": "33"
+            }
+          }
+        }
+      },
+      "axi_engine_1": {
+        "vlnv": "user.org:user:axi_engine:1.0",
+        "xci_name": "axi_checker_axi_engine_0_1",
+        "xci_path": "ip/axi_checker_axi_engine_0_1/axi_checker_axi_engine_0_1.xci",
+        "inst_hier_path": "axi_engine_1",
+        "interface_ports": {
+          "m_axi": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "m_axi",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0x0001FFFFFFFF",
+              "width": "33"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "m_axi": {
+              "range": "8G",
+              "width": "33"
+            }
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axi_crossbar_0_M00_AXI": {
+        "interface_ports": [
+          "axi_crossbar_0/M00_AXI",
+          "axi_vip_0/S_AXI"
+        ]
+      },
+      "axi_engine_0_m_axi": {
+        "interface_ports": [
+          "axi_engine_0/m_axi",
+          "axi_crossbar_0/S00_AXI"
+        ]
+      },
+      "axi_engine_1_m_axi": {
+        "interface_ports": [
+          "axi_engine_1/m_axi",
+          "axi_crossbar_0/S01_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "axi_engine_0_end_rd": {
+        "ports": [
+          "axi_engine_0/end_rd",
+          "end_rd"
+        ]
+      },
+      "axi_engine_0_end_wr": {
+        "ports": [
+          "axi_engine_0/end_wr",
+          "end_wr"
+        ]
+      },
+      "axi_engine_0_read_data": {
+        "ports": [
+          "axi_engine_0/read_data",
+          "read_data"
+        ]
+      },
+      "axi_engine_1_end_rd": {
+        "ports": [
+          "axi_engine_1/end_rd",
+          "d_end_rd"
+        ]
+      },
+      "axi_engine_1_end_wr": {
+        "ports": [
+          "axi_engine_1/end_wr",
+          "d_end_wr"
+        ]
+      },
+      "axi_engine_1_read_data": {
+        "ports": [
+          "axi_engine_1/read_data",
+          "d_read_data"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "axi_vip_0/aclk",
+          "axi_crossbar_0/aclk",
+          "axi_engine_0/clk",
+          "axi_engine_1/clk"
+        ]
+      },
+      "d_read_addr_1": {
+        "ports": [
+          "d_read_addr",
+          "axi_engine_1/read_addr"
+        ]
+      },
+      "d_start_rd_1": {
+        "ports": [
+          "d_start_rd",
+          "axi_engine_1/start_rd"
+        ]
+      },
+      "d_start_wr_1": {
+        "ports": [
+          "d_start_wr",
+          "axi_engine_1/start_wr"
+        ]
+      },
+      "d_write_addr_1": {
+        "ports": [
+          "d_write_addr",
+          "axi_engine_1/write_addr"
+        ]
+      },
+      "d_write_data_1": {
+        "ports": [
+          "d_write_data",
+          "axi_engine_1/write_data"
+        ]
+      },
+      "read_addr_1": {
+        "ports": [
+          "read_addr",
+          "axi_engine_0/read_addr"
+        ]
+      },
+      "resetn_1": {
+        "ports": [
+          "resetn",
+          "axi_vip_0/aresetn",
+          "axi_crossbar_0/aresetn",
+          "axi_engine_0/resetn",
+          "axi_engine_1/resetn"
+        ]
+      },
+      "start_rd_1": {
+        "ports": [
+          "start_rd",
+          "axi_engine_0/start_rd"
+        ]
+      },
+      "start_wr_1": {
+        "ports": [
+          "start_wr",
+          "axi_engine_0/start_wr"
+        ]
+      },
+      "write_addr_1": {
+        "ports": [
+          "write_addr",
+          "axi_engine_0/write_addr"
+        ]
+      },
+      "write_data_1": {
+        "ports": [
+          "write_data",
+          "axi_engine_0/write_data"
+        ]
+      }
+    },
+    "addressing": {
+      "/axi_engine_0": {
+        "address_spaces": {
+          "m_axi": {
+            "segments": {
+              "SEG_axi_vip_0_Reg": {
+                "address_block": "/axi_vip_0/S_AXI/Reg",
+                "offset": "0x044A00000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
