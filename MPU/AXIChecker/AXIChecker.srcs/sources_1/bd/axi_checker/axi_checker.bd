@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5D53316A91091DB6",
+      "boundary_crc": "0xBF7B7B286A623569",
       "device": "xcu280-fsvh2892-2L-e",
       "gen_directory": "../../../../AXIChecker.gen/sources_1/bd/axi_checker",
       "name": "axi_checker",
@@ -11,10 +11,15 @@
       "validated": "true"
     },
     "design_tree": {
-      "axi_vip_0": "",
-      "axi_crossbar_0": "",
-      "axi_engine_0": "",
-      "axi_engine_1": ""
+      "Vertex_Mem_AXIVer": "",
+      "Edge_Mem_AXIVer": "",
+      "Vertex_AXI_Engine": "",
+      "Edge_AXI_Engine": "",
+      "BlockTracker": "",
+      "Message_FIFO": "",
+      "VMU_to_MGU_FIFO_A": "",
+      "VMU_to_MGU_FIFO_B": "",
+      "MPU_VMU_FIFO": ""
     },
     "ports": {
       "clk_100MHz": {
@@ -22,8 +27,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "resetn",
-            "value_src": "default"
+            "value": "resetn:reset"
           },
           "CLK_DOMAIN": {
             "value": "axi_checker_clk_100MHz",
@@ -91,45 +95,227 @@
         "left": "255",
         "right": "0"
       },
-      "d_start_wr": {
-        "direction": "I"
-      },
-      "d_start_rd": {
-        "direction": "I"
-      },
-      "d_write_addr": {
-        "direction": "I",
-        "left": "32",
-        "right": "0"
-      },
-      "d_read_addr": {
-        "direction": "I",
-        "left": "32",
-        "right": "0"
-      },
-      "d_write_data": {
-        "direction": "I",
-        "left": "255",
-        "right": "0"
-      },
-      "d_end_wr": {
+      "end_rd_edge": {
         "direction": "O"
       },
-      "d_end_rd": {
-        "direction": "O"
-      },
-      "d_read_data": {
+      "read_data_edge": {
+        "type": "data",
         "direction": "O",
-        "left": "255",
+        "left": "511",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "end_wr_edge": {
+        "direction": "O"
+      },
+      "start_wr_edge": {
+        "direction": "I"
+      },
+      "start_rd_edge": {
+        "direction": "I"
+      },
+      "write_addr_edge": {
+        "direction": "I",
+        "left": "32",
         "right": "0"
+      },
+      "read_addr_edge": {
+        "direction": "I",
+        "left": "32",
+        "right": "0"
+      },
+      "write_data_edge": {
+        "type": "data",
+        "direction": "I",
+        "left": "511",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "rburst": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "rburst_edge": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "wburst": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "wburst_edge": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "addr_a": {
+        "direction": "I",
+        "left": "12",
+        "right": "0"
+      },
+      "din_a": {
+        "type": "data",
+        "direction": "I",
+        "left": "71",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "enable_a": {
+        "direction": "I"
+      },
+      "WrEnable_a": {
+        "direction": "I"
+      },
+      "dout_a": {
+        "type": "data",
+        "direction": "O",
+        "left": "71",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "Message_FIFO_Read_Valid": {
+        "direction": "O"
+      },
+      "VMU_to_MGU_FIFO_A_Read_Valid": {
+        "direction": "O"
+      },
+      "VMU_to_MGU_FIFO_B_Read_Valid": {
+        "direction": "O"
+      },
+      "Message_FIFO_Empty": {
+        "direction": "O"
+      },
+      "Message_FIFO_Full": {
+        "direction": "O"
+      },
+      "Message_FIFO_Write": {
+        "direction": "I"
+      },
+      "Message_FIFO_Read": {
+        "direction": "I"
+      },
+      "Message_FIFO_ReadData": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "Message_FIFO_WriteData": {
+        "direction": "I",
+        "left": "63",
+        "right": "0"
+      },
+      "VMU_to_MGU_FIFO_A_Full": {
+        "direction": "O"
+      },
+      "VMU_to_MGU_FIFO_A_WriteData": {
+        "direction": "I",
+        "left": "93",
+        "right": "0"
+      },
+      "VMU_to_MGU_FIFO_A_Write": {
+        "direction": "I"
+      },
+      "VMU_to_MGU_FIFO_A_Empty": {
+        "direction": "O"
+      },
+      "VMU_to_MGU_FIFO_A_Read": {
+        "direction": "I"
+      },
+      "VMU_to_MGU_FIFO_A_ReadData": {
+        "direction": "O",
+        "left": "93",
+        "right": "0"
+      },
+      "VMU_to_MGU_FIFO_B_Full": {
+        "direction": "O"
+      },
+      "VMU_to_MGU_FIFO_B_WriteData": {
+        "direction": "I",
+        "left": "93",
+        "right": "0"
+      },
+      "VMU_to_MGU_FIFO_B_Write": {
+        "direction": "I"
+      },
+      "VMU_to_MGU_FIFO_B_Read": {
+        "direction": "I"
+      },
+      "VMU_to_MGU_FIFO_B_ReadData": {
+        "direction": "O",
+        "left": "93",
+        "right": "0"
+      },
+      "VMU_to_MGU_FIFO_B_Empty": {
+        "direction": "O"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "MPU_VMU_FIFO_Read_Valid": {
+        "direction": "O"
+      },
+      "MPU_VMU_FIFO_Full": {
+        "direction": "O"
+      },
+      "MPU_VMU_FIFO_WriteData": {
+        "direction": "I",
+        "left": "32",
+        "right": "0"
+      },
+      "MPU_VMU_FIFO_Write": {
+        "direction": "I"
+      },
+      "MPU_VMU_FIFO_Empty": {
+        "direction": "O"
+      },
+      "MPU_VMU_FIFO_ReadData": {
+        "direction": "O",
+        "left": "32",
+        "right": "0"
+      },
+      "MPU_VMU_FIFO_Read": {
+        "direction": "I"
       }
     },
     "components": {
-      "axi_vip_0": {
+      "Vertex_Mem_AXIVer": {
         "vlnv": "xilinx.com:ip:axi_vip:1.1",
         "xci_name": "axi_checker_axi_vip_0_0",
         "xci_path": "ip/axi_checker_axi_vip_0_0/axi_checker_axi_vip_0_0.xci",
-        "inst_hier_path": "axi_vip_0",
+        "inst_hier_path": "Vertex_Mem_AXIVer",
         "parameters": {
           "ADDR_WIDTH": {
             "value": "33"
@@ -142,107 +328,28 @@
           }
         }
       },
-      "axi_crossbar_0": {
-        "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-        "xci_name": "axi_checker_axi_crossbar_0_0",
-        "xci_path": "ip/axi_checker_axi_crossbar_0_0/axi_checker_axi_crossbar_0_0.xci",
-        "inst_hier_path": "axi_crossbar_0",
+      "Edge_Mem_AXIVer": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "axi_checker_axi_vip_1_0",
+        "xci_path": "ip/axi_checker_axi_vip_1_0/axi_checker_axi_vip_1_0.xci",
+        "inst_hier_path": "Edge_Mem_AXIVer",
         "parameters": {
           "ADDR_WIDTH": {
             "value": "33"
           },
           "DATA_WIDTH": {
-            "value": "256"
+            "value": "512"
           },
-          "ID_WIDTH": {
-            "value": "6"
-          },
-          "NUM_MI": {
-            "value": "1"
-          },
-          "NUM_SI": {
-            "value": "2"
-          },
-          "S00_READ_ACCEPTANCE": {
-            "value": "1"
-          },
-          "S00_WRITE_ACCEPTANCE": {
-            "value": "1"
-          },
-          "S01_BASE_ID": {
-            "value": "0x00000020"
-          },
-          "S01_READ_ACCEPTANCE": {
-            "value": "1"
-          },
-          "S01_WRITE_ACCEPTANCE": {
-            "value": "1"
-          },
-          "S02_BASE_ID": {
-            "value": "0x00000040"
-          },
-          "S03_BASE_ID": {
-            "value": "0x00000060"
-          },
-          "S04_BASE_ID": {
-            "value": "0x00000080"
-          },
-          "S05_BASE_ID": {
-            "value": "0x000000a0"
-          },
-          "S06_BASE_ID": {
-            "value": "0x000000c0"
-          },
-          "S07_BASE_ID": {
-            "value": "0x000000e0"
-          },
-          "S08_BASE_ID": {
-            "value": "0x00000100"
-          },
-          "S09_BASE_ID": {
-            "value": "0x00000120"
-          },
-          "S10_BASE_ID": {
-            "value": "0x00000140"
-          },
-          "S11_BASE_ID": {
-            "value": "0x00000160"
-          },
-          "S12_BASE_ID": {
-            "value": "0x00000180"
-          },
-          "S13_BASE_ID": {
-            "value": "0x000001a0"
-          },
-          "S14_BASE_ID": {
-            "value": "0x000001c0"
-          },
-          "S15_BASE_ID": {
-            "value": "0x000001e0"
-          }
-        },
-        "interface_ports": {
-          "S00_AXI": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "bridges": [
-              "M00_AXI"
-            ]
-          },
-          "S01_AXI": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "bridges": [
-              "M00_AXI"
-            ]
+          "INTERFACE_MODE": {
+            "value": "SLAVE"
           }
         }
       },
-      "axi_engine_0": {
-        "vlnv": "user.org:user:axi_engine:1.0",
-        "xci_name": "axi_checker_axi_engine_0_0",
-        "xci_path": "ip/axi_checker_axi_engine_0_0/axi_checker_axi_engine_0_0.xci",
-        "inst_hier_path": "axi_engine_0",
+      "Vertex_AXI_Engine": {
+        "vlnv": "user.org:user:AXI_Engine:2.0",
+        "xci_name": "axi_checker_AXI_Engine_0_2",
+        "xci_path": "ip/axi_checker_AXI_Engine_0_2/axi_checker_AXI_Engine_0_2.xci",
+        "inst_hier_path": "Vertex_AXI_Engine",
         "interface_ports": {
           "m_axi": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -264,11 +371,16 @@
           }
         }
       },
-      "axi_engine_1": {
-        "vlnv": "user.org:user:axi_engine:1.0",
-        "xci_name": "axi_checker_axi_engine_0_1",
-        "xci_path": "ip/axi_checker_axi_engine_0_1/axi_checker_axi_engine_0_1.xci",
-        "inst_hier_path": "axi_engine_1",
+      "Edge_AXI_Engine": {
+        "vlnv": "user.org:user:AXI_Engine:2.0",
+        "xci_name": "axi_checker_AXI_Engine_1_1",
+        "xci_path": "ip/axi_checker_AXI_Engine_1_1/axi_checker_AXI_Engine_1_1.xci",
+        "inst_hier_path": "Edge_AXI_Engine",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "512"
+          }
+        },
         "interface_ports": {
           "m_axi": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -287,155 +399,522 @@
               "range": "8G",
               "width": "33"
             }
+          }
+        }
+      },
+      "BlockTracker": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "axi_checker_blk_mem_gen_0_0",
+        "xci_path": "ip/axi_checker_blk_mem_gen_0_0/axi_checker_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "BlockTracker",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "WRITE_FIRST"
+          },
+          "PRIM_type_to_Implement": {
+            "value": "URAM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "50"
+          },
+          "Port_B_Clock": {
+            "value": "0"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "0"
+          },
+          "Port_B_Write_Rate": {
+            "value": "0"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Width_A": {
+            "value": "72"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Message_FIFO": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "axi_checker_fifo_generator_0_0",
+        "xci_path": "ip/axi_checker_fifo_generator_0_0/axi_checker_fifo_generator_0_0.xci",
+        "inst_hier_path": "Message_FIFO",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "64"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          },
+          "Use_Embedded_Registers": {
+            "value": "true"
+          },
+          "Valid_Flag": {
+            "value": "true"
+          }
+        }
+      },
+      "VMU_to_MGU_FIFO_A": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "axi_checker_fifo_generator_0_1",
+        "xci_path": "ip/axi_checker_fifo_generator_0_1/axi_checker_fifo_generator_0_1.xci",
+        "inst_hier_path": "VMU_to_MGU_FIFO_A",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "94"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          },
+          "Use_Embedded_Registers": {
+            "value": "true"
+          },
+          "Valid_Flag": {
+            "value": "true"
+          }
+        }
+      },
+      "VMU_to_MGU_FIFO_B": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "axi_checker_fifo_generator_1_0",
+        "xci_path": "ip/axi_checker_fifo_generator_1_0/axi_checker_fifo_generator_1_0.xci",
+        "inst_hier_path": "VMU_to_MGU_FIFO_B",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "94"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          },
+          "Use_Embedded_Registers": {
+            "value": "true"
+          },
+          "Valid_Flag": {
+            "value": "true"
+          }
+        }
+      },
+      "MPU_VMU_FIFO": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "axi_checker_fifo_generator_0_2",
+        "xci_path": "ip/axi_checker_fifo_generator_0_2/axi_checker_fifo_generator_0_2.xci",
+        "inst_hier_path": "MPU_VMU_FIFO",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "33"
+          },
+          "Input_Depth": {
+            "value": "512"
+          },
+          "Use_Embedded_Registers": {
+            "value": "true"
+          },
+          "Valid_Flag": {
+            "value": "true"
           }
         }
       }
     },
     "interface_nets": {
-      "axi_crossbar_0_M00_AXI": {
+      "AXI_Engine_0_m_axi": {
         "interface_ports": [
-          "axi_crossbar_0/M00_AXI",
-          "axi_vip_0/S_AXI"
+          "Vertex_AXI_Engine/m_axi",
+          "Vertex_Mem_AXIVer/S_AXI"
         ]
       },
-      "axi_engine_0_m_axi": {
+      "AXI_Engine_1_m_axi": {
         "interface_ports": [
-          "axi_engine_0/m_axi",
-          "axi_crossbar_0/S00_AXI"
-        ]
-      },
-      "axi_engine_1_m_axi": {
-        "interface_ports": [
-          "axi_engine_1/m_axi",
-          "axi_crossbar_0/S01_AXI"
+          "Edge_AXI_Engine/m_axi",
+          "Edge_Mem_AXIVer/S_AXI"
         ]
       }
     },
     "nets": {
-      "axi_engine_0_end_rd": {
+      "AXI_Engine_0_end_rd": {
         "ports": [
-          "axi_engine_0/end_rd",
+          "Vertex_AXI_Engine/end_rd",
           "end_rd"
         ]
       },
-      "axi_engine_0_end_wr": {
+      "AXI_Engine_0_end_wr": {
         "ports": [
-          "axi_engine_0/end_wr",
+          "Vertex_AXI_Engine/end_wr",
           "end_wr"
         ]
       },
-      "axi_engine_0_read_data": {
+      "AXI_Engine_0_read_data": {
         "ports": [
-          "axi_engine_0/read_data",
+          "Vertex_AXI_Engine/read_data",
           "read_data"
         ]
       },
-      "axi_engine_1_end_rd": {
+      "AXI_Engine_1_end_rd": {
         "ports": [
-          "axi_engine_1/end_rd",
-          "d_end_rd"
+          "Edge_AXI_Engine/end_rd",
+          "end_rd_edge"
         ]
       },
-      "axi_engine_1_end_wr": {
+      "AXI_Engine_1_end_wr": {
         "ports": [
-          "axi_engine_1/end_wr",
-          "d_end_wr"
+          "Edge_AXI_Engine/end_wr",
+          "end_wr_edge"
         ]
       },
-      "axi_engine_1_read_data": {
+      "AXI_Engine_1_read_data": {
         "ports": [
-          "axi_engine_1/read_data",
-          "d_read_data"
+          "Edge_AXI_Engine/read_data",
+          "read_data_edge"
+        ]
+      },
+      "MPU_VMU_FIFO_Read_1": {
+        "ports": [
+          "MPU_VMU_FIFO_Read",
+          "MPU_VMU_FIFO/rd_en"
+        ]
+      },
+      "MPU_VMU_FIFO_WriteData_1": {
+        "ports": [
+          "MPU_VMU_FIFO_WriteData",
+          "MPU_VMU_FIFO/din"
+        ]
+      },
+      "MPU_VMU_FIFO_Write_1": {
+        "ports": [
+          "MPU_VMU_FIFO_Write",
+          "MPU_VMU_FIFO/wr_en"
+        ]
+      },
+      "Message_FIFO_Read_1": {
+        "ports": [
+          "Message_FIFO_Read",
+          "Message_FIFO/rd_en"
+        ]
+      },
+      "Message_FIFO_WriteData_1": {
+        "ports": [
+          "Message_FIFO_WriteData",
+          "Message_FIFO/din"
+        ]
+      },
+      "Message_FIFO_Write_1": {
+        "ports": [
+          "Message_FIFO_Write",
+          "Message_FIFO/wr_en"
+        ]
+      },
+      "VMU_to_MGU_FIFO_A_Read_1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A_Read",
+          "VMU_to_MGU_FIFO_A/rd_en"
+        ]
+      },
+      "VMU_to_MGU_FIFO_A_WriteData_1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A_WriteData",
+          "VMU_to_MGU_FIFO_A/din"
+        ]
+      },
+      "VMU_to_MGU_FIFO_A_Write_1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A_Write",
+          "VMU_to_MGU_FIFO_A/wr_en"
+        ]
+      },
+      "VMU_to_MGU_FIFO_A_dout": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A/dout",
+          "VMU_to_MGU_FIFO_A_ReadData"
+        ]
+      },
+      "VMU_to_MGU_FIFO_A_empty1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A/empty",
+          "VMU_to_MGU_FIFO_A_Empty"
+        ]
+      },
+      "VMU_to_MGU_FIFO_A_full1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A/full",
+          "VMU_to_MGU_FIFO_A_Full"
+        ]
+      },
+      "VMU_to_MGU_FIFO_B_Read_1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B_Read",
+          "VMU_to_MGU_FIFO_B/rd_en"
+        ]
+      },
+      "VMU_to_MGU_FIFO_B_WriteData_1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B_WriteData",
+          "VMU_to_MGU_FIFO_B/din"
+        ]
+      },
+      "VMU_to_MGU_FIFO_B_Write_1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B_Write",
+          "VMU_to_MGU_FIFO_B/wr_en"
+        ]
+      },
+      "VMU_to_MGU_FIFO_B_dout": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B/dout",
+          "VMU_to_MGU_FIFO_B_ReadData"
+        ]
+      },
+      "VMU_to_MGU_FIFO_B_empty1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B/empty",
+          "VMU_to_MGU_FIFO_B_Empty"
+        ]
+      },
+      "VMU_to_MGU_FIFO_B_full1": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B/full",
+          "VMU_to_MGU_FIFO_B_Full"
+        ]
+      },
+      "WrEnable_a_1": {
+        "ports": [
+          "WrEnable_a",
+          "BlockTracker/wea"
+        ]
+      },
+      "addr_a_1": {
+        "ports": [
+          "addr_a",
+          "BlockTracker/addra"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "BlockTracker/douta",
+          "dout_a"
         ]
       },
       "clk_100MHz_1": {
         "ports": [
           "clk_100MHz",
-          "axi_vip_0/aclk",
-          "axi_crossbar_0/aclk",
-          "axi_engine_0/clk",
-          "axi_engine_1/clk"
+          "Vertex_Mem_AXIVer/aclk",
+          "Edge_Mem_AXIVer/aclk",
+          "Vertex_AXI_Engine/clk",
+          "Edge_AXI_Engine/clk",
+          "BlockTracker/clka",
+          "VMU_to_MGU_FIFO_B/clk",
+          "VMU_to_MGU_FIFO_A/clk",
+          "Message_FIFO/clk",
+          "MPU_VMU_FIFO/clk"
         ]
       },
-      "d_read_addr_1": {
+      "din_a_1": {
         "ports": [
-          "d_read_addr",
-          "axi_engine_1/read_addr"
+          "din_a",
+          "BlockTracker/dina"
         ]
       },
-      "d_start_rd_1": {
+      "enable_a_1": {
         "ports": [
-          "d_start_rd",
-          "axi_engine_1/start_rd"
+          "enable_a",
+          "BlockTracker/ena"
         ]
       },
-      "d_start_wr_1": {
+      "fifo_generator_0_dout": {
         "ports": [
-          "d_start_wr",
-          "axi_engine_1/start_wr"
+          "Message_FIFO/dout",
+          "Message_FIFO_ReadData"
         ]
       },
-      "d_write_addr_1": {
+      "fifo_generator_0_dout1": {
         "ports": [
-          "d_write_addr",
-          "axi_engine_1/write_addr"
+          "MPU_VMU_FIFO/dout",
+          "MPU_VMU_FIFO_ReadData"
         ]
       },
-      "d_write_data_1": {
+      "fifo_generator_0_empty": {
         "ports": [
-          "d_write_data",
-          "axi_engine_1/write_data"
+          "Message_FIFO/empty",
+          "Message_FIFO_Empty"
+        ]
+      },
+      "fifo_generator_0_empty1": {
+        "ports": [
+          "MPU_VMU_FIFO/empty",
+          "MPU_VMU_FIFO_Empty"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "Message_FIFO/full",
+          "Message_FIFO_Full"
+        ]
+      },
+      "fifo_generator_0_full1": {
+        "ports": [
+          "MPU_VMU_FIFO/full",
+          "MPU_VMU_FIFO_Full"
+        ]
+      },
+      "fifo_generator_0_valid": {
+        "ports": [
+          "Message_FIFO/valid",
+          "Message_FIFO_Read_Valid"
+        ]
+      },
+      "fifo_generator_0_valid1": {
+        "ports": [
+          "MPU_VMU_FIFO/valid",
+          "MPU_VMU_FIFO_Read_Valid"
+        ]
+      },
+      "fifo_generator_1_valid": {
+        "ports": [
+          "VMU_to_MGU_FIFO_A/valid",
+          "VMU_to_MGU_FIFO_A_Read_Valid"
+        ]
+      },
+      "fifo_generator_2_valid": {
+        "ports": [
+          "VMU_to_MGU_FIFO_B/valid",
+          "VMU_to_MGU_FIFO_B_Read_Valid"
+        ]
+      },
+      "rburst_1": {
+        "ports": [
+          "rburst",
+          "Vertex_AXI_Engine/rburst"
+        ]
+      },
+      "rburst_edge_1": {
+        "ports": [
+          "rburst_edge",
+          "Edge_AXI_Engine/rburst"
         ]
       },
       "read_addr_1": {
         "ports": [
           "read_addr",
-          "axi_engine_0/read_addr"
+          "Vertex_AXI_Engine/read_addr"
+        ]
+      },
+      "read_addr_edge_1": {
+        "ports": [
+          "read_addr_edge",
+          "Edge_AXI_Engine/read_addr"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "Message_FIFO/srst",
+          "VMU_to_MGU_FIFO_A/srst",
+          "VMU_to_MGU_FIFO_B/srst",
+          "MPU_VMU_FIFO/srst"
         ]
       },
       "resetn_1": {
         "ports": [
           "resetn",
-          "axi_vip_0/aresetn",
-          "axi_crossbar_0/aresetn",
-          "axi_engine_0/resetn",
-          "axi_engine_1/resetn"
+          "Vertex_Mem_AXIVer/aresetn",
+          "Edge_Mem_AXIVer/aresetn",
+          "Vertex_AXI_Engine/resetn",
+          "Edge_AXI_Engine/resetn"
         ]
       },
       "start_rd_1": {
         "ports": [
           "start_rd",
-          "axi_engine_0/start_rd"
+          "Vertex_AXI_Engine/start_rd"
+        ]
+      },
+      "start_rd_edge_1": {
+        "ports": [
+          "start_rd_edge",
+          "Edge_AXI_Engine/start_rd"
         ]
       },
       "start_wr_1": {
         "ports": [
           "start_wr",
-          "axi_engine_0/start_wr"
+          "Vertex_AXI_Engine/start_wr"
+        ]
+      },
+      "start_wr_edge_1": {
+        "ports": [
+          "start_wr_edge",
+          "Edge_AXI_Engine/start_wr"
+        ]
+      },
+      "wburst_1": {
+        "ports": [
+          "wburst",
+          "Vertex_AXI_Engine/wburst"
+        ]
+      },
+      "wburst_edge_1": {
+        "ports": [
+          "wburst_edge",
+          "Edge_AXI_Engine/wburst"
         ]
       },
       "write_addr_1": {
         "ports": [
           "write_addr",
-          "axi_engine_0/write_addr"
+          "Vertex_AXI_Engine/write_addr"
+        ]
+      },
+      "write_addr_edge_1": {
+        "ports": [
+          "write_addr_edge",
+          "Edge_AXI_Engine/write_addr"
         ]
       },
       "write_data_1": {
         "ports": [
           "write_data",
-          "axi_engine_0/write_data"
+          "Vertex_AXI_Engine/write_data"
+        ]
+      },
+      "write_data_edge_1": {
+        "ports": [
+          "write_data_edge",
+          "Edge_AXI_Engine/write_data"
         ]
       }
     },
     "addressing": {
-      "/axi_engine_0": {
+      "/Vertex_AXI_Engine": {
         "address_spaces": {
           "m_axi": {
             "segments": {
               "SEG_axi_vip_0_Reg": {
-                "address_block": "/axi_vip_0/S_AXI/Reg",
+                "address_block": "/Vertex_Mem_AXIVer/S_AXI/Reg",
                 "offset": "0x044A00000",
                 "range": "64K"
+              }
+            }
+          }
+        }
+      },
+      "/Edge_AXI_Engine": {
+        "address_spaces": {
+          "m_axi": {
+            "segments": {
+              "SEG_axi_vip_1_Reg": {
+                "address_block": "/Edge_Mem_AXIVer/S_AXI/Reg",
+                "offset": "0x044A00000",
+                "range": "256K"
               }
             }
           }

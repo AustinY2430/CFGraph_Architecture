@@ -2,8 +2,8 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>user.org</spirit:vendor>
   <spirit:library>user</spirit:library>
-  <spirit:name>axi_engine</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:name>AXI_Engine</spirit:name>
+  <spirit:version>2.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>m_axi</spirit:name>
@@ -406,7 +406,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>973c011f</spirit:value>
+            <spirit:value>20a455ac</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -422,7 +422,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>973c011f</spirit:value>
+            <spirit:value>20a455ac</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -538,11 +538,45 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>wburst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LEN_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>read_addr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.ADDR_WIDTH&apos;)) - 1)">32</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rburst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LEN_WIDTH&apos;)) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1303,7 +1337,7 @@
       <spirit:file>
         <spirit:name>axi_engine.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e1b39c4c</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_415856b5</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1324,14 +1358,14 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/axi_engine_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/AXI_Engine_v2_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_70184f71</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>axi_engine_v1_0</spirit:description>
+  <spirit:description>AXI_Engine_v2_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>ENGINE_ID</spirit:name>
@@ -1395,17 +1429,17 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>axi_engine_v1_0</xilinx:displayName>
+      <xilinx:displayName>AXI_Engine_v2_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>15</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-11-08T21:53:58Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>34</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-12-12T20:53:03Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5a9b23da"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="b7e95b93"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="986706f7"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7f61e739"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0cad0308"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="9d40cd06"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d092b4fb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="3e180a61"/>
     </xilinx:packagingInfo>

@@ -1,11 +1,11 @@
 
 { 
-    crc :  13761585343664243088  , 
+    crc :  12517748448140419672  , 
     ccp_crc :  0  , 
-    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L generic_baseblocks_v2_1_0 -L axi_register_slice_v2_1_26 -L fifo_generator_v13_2_7 -L axi_data_fifo_v2_1_25 -L axi_crossbar_v2_1_27 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl" , 
+    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L blk_mem_gen_v8_4_5 -L fifo_generator_v13_2_7 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl" , 
     buildDate : "Apr 18 2022" , 
     buildTime : "15:53:03" , 
-    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_top_behav/xsimk\"   \"xsim.dir/tb_top_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_1.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_2.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_3.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_4.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_5.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_6.lnx64.o\" -L\"/home/austin01/Xilinx/Vivado/2022.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_top_behav/xsimk\"   \"xsim.dir/tb_top_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_1.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_2.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_3.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_4.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_5.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_6.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_7.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_8.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_9.lnx64.o\" \"xsim.dir/tb_top_behav/obj/xsim_10.lnx64.o\" -L\"/home/austin01/Xilinx/Vivado/2022.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
     aggregate_nets : 
     [ 
     ] 

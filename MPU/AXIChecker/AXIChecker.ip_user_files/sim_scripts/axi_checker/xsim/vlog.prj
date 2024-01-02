@@ -1,15 +1,21 @@
 sv xil_defaultlib --include "/home/austin01/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../AXIChecker.gen/sources_1/bd/axi_checker/ipshared/ec67/hdl" \
 "../../../bd/axi_checker/ip/axi_checker_axi_vip_0_0/sim/axi_checker_axi_vip_0_0_pkg.sv" \
 "../../../bd/axi_checker/ip/axi_checker_axi_vip_0_0/sim/axi_checker_axi_vip_0_0.sv" \
+"../../../bd/axi_checker/ip/axi_checker_axi_vip_1_0/sim/axi_checker_axi_vip_1_0_pkg.sv" \
+"../../../bd/axi_checker/ip/axi_checker_axi_vip_1_0/sim/axi_checker_axi_vip_1_0.sv" \
 
 verilog xil_defaultlib --include "/home/austin01/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../AXIChecker.gen/sources_1/bd/axi_checker/ipshared/ec67/hdl" \
-"../../../bd/axi_checker/ip/axi_checker_axi_crossbar_0_0/sim/axi_checker_axi_crossbar_0_0.v" \
-"../../../bd/axi_checker/ipshared/7913/rd_engine.v" \
-"../../../bd/axi_checker/ipshared/7913/wr_engine.v" \
-"../../../bd/axi_checker/ipshared/7913/axi_engine.v" \
-"../../../bd/axi_checker/ip/axi_checker_axi_engine_0_0/sim/axi_checker_axi_engine_0_0.v" \
-"../../../bd/axi_checker/ip/axi_checker_axi_engine_0_1/sim/axi_checker_axi_engine_0_1.v" \
+"../../../bd/axi_checker/ipshared/40fd/rd_engine.v" \
+"../../../bd/axi_checker/ipshared/40fd/wr_engine.v" \
+"../../../bd/axi_checker/ipshared/40fd/axi_engine.v" \
+"../../../bd/axi_checker/ip/axi_checker_AXI_Engine_0_2/sim/axi_checker_AXI_Engine_0_2.v" \
+"../../../bd/axi_checker/ip/axi_checker_AXI_Engine_1_1/sim/axi_checker_AXI_Engine_1_1.v" \
+"../../../bd/axi_checker/ip/axi_checker_blk_mem_gen_0_0/sim/axi_checker_blk_mem_gen_0_0.v" \
+"../../../bd/axi_checker/ip/axi_checker_fifo_generator_0_0/sim/axi_checker_fifo_generator_0_0.v" \
+"../../../bd/axi_checker/ip/axi_checker_fifo_generator_0_1/sim/axi_checker_fifo_generator_0_1.v" \
+"../../../bd/axi_checker/ip/axi_checker_fifo_generator_1_0/sim/axi_checker_fifo_generator_1_0.v" \
 "../../../bd/axi_checker/sim/axi_checker.v" \
+"../../../bd/axi_checker/ip/axi_checker_fifo_generator_0_2/sim/axi_checker_fifo_generator_0_2.v" \
 
 verilog xil_defaultlib "glbl.v"
 

@@ -9,232 +9,1009 @@
             <top_module name="glbl" />
             <top_module name="std" />
             <top_module name="tb_top" />
+            <top_module name="vcomponents" />
             <top_module name="xil_common_vip_pkg" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,677.088 ns"></ZoomEndTime>
-      <Cursor1Time time="895.000 ns"></Cursor1Time>
+      <ZoomStartTime time="44,299.417153 us"></ZoomStartTime>
+      <ZoomEndTime time="44,316.017154 us"></ZoomEndTime>
+      <Cursor1Time time="44,306.757153 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <NameColumnWidth column_width="103"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="46" />
-   <wvobject type="logic" fp_name="/tb_top/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/start_rd">
-      <obj_property name="ElementShortName">start_rd</obj_property>
-      <obj_property name="ObjectShortName">start_rd</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/start_wr">
-      <obj_property name="ElementShortName">start_wr</obj_property>
-      <obj_property name="ObjectShortName">start_wr</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/end_rd">
-      <obj_property name="ElementShortName">end_rd</obj_property>
-      <obj_property name="ObjectShortName">end_rd</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/end_wr">
-      <obj_property name="ElementShortName">end_wr</obj_property>
-      <obj_property name="ObjectShortName">end_wr</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/raddr">
-      <obj_property name="ElementShortName">raddr[32:0]</obj_property>
-      <obj_property name="ObjectShortName">raddr[32:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/waddr">
-      <obj_property name="ElementShortName">waddr[32:0]</obj_property>
-      <obj_property name="ObjectShortName">waddr[32:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/wdata">
-      <obj_property name="ElementShortName">wdata[255:0]</obj_property>
-      <obj_property name="ObjectShortName">wdata[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/rdata">
-      <obj_property name="ElementShortName">rdata[255:0]</obj_property>
-      <obj_property name="ObjectShortName">rdata[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/resetn">
-      <obj_property name="ElementShortName">resetn</obj_property>
-      <obj_property name="ObjectShortName">resetn</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_top/AXI_CHECK/axi_checker_i/axi_vip_0/S_AXI">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/tb_top/AXI_CHECK/axi_checker_i/axi_vip_0/S_AXI.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject type="protoinst" fp_name="/tb_top/AXI_CHECK/axi_checker_i/Vertex_Mem_AXIVer/S_AXI">
       <obj_property name="ElementShortName">S_AXI</obj_property>
       <obj_property name="ObjectShortName">S_AXI</obj_property>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/tb_top/AXI_CHECK/axi_checker_i/Edge_Mem_AXIVer/S_AXI">
+      <obj_property name="ElementShortName">S_AXI</obj_property>
+      <obj_property name="ObjectShortName">S_AXI</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group727">
+      <obj_property name="label">mpu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/resetn">
+         <obj_property name="ElementShortName">resetn</obj_property>
+         <obj_property name="ObjectShortName">resetn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/FIFO_data_msg">
+         <obj_property name="ElementShortName">FIFO_data_msg[63:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_data_msg[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/FIFO_read_msg">
+         <obj_property name="ElementShortName">FIFO_read_msg</obj_property>
+         <obj_property name="ObjectShortName">FIFO_read_msg</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/FIFO_empty_msg">
+         <obj_property name="ElementShortName">FIFO_empty_msg</obj_property>
+         <obj_property name="ObjectShortName">FIFO_empty_msg</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/FIFO_read_valid_msg">
+         <obj_property name="ElementShortName">FIFO_read_valid_msg</obj_property>
+         <obj_property name="ObjectShortName">FIFO_read_valid_msg</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/read_addr">
+         <obj_property name="ElementShortName">read_addr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">read_addr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/read_data">
+         <obj_property name="ElementShortName">read_data[255:0]</obj_property>
+         <obj_property name="ObjectShortName">read_data[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/rburst">
+         <obj_property name="ElementShortName">rburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/write_addr">
+         <obj_property name="ElementShortName">write_addr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">write_addr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/write_data">
+         <obj_property name="ElementShortName">write_data[255:0]</obj_property>
+         <obj_property name="ObjectShortName">write_data[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/wburst">
+         <obj_property name="ElementShortName">wburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/start_rd">
+         <obj_property name="ElementShortName">start_rd</obj_property>
+         <obj_property name="ObjectShortName">start_rd</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/start_wr">
+         <obj_property name="ElementShortName">start_wr</obj_property>
+         <obj_property name="ObjectShortName">start_wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/end_rd">
+         <obj_property name="ElementShortName">end_rd</obj_property>
+         <obj_property name="ObjectShortName">end_rd</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/end_wr">
+         <obj_property name="ElementShortName">end_wr</obj_property>
+         <obj_property name="ObjectShortName">end_wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/axi_in_use_vmu">
+         <obj_property name="ElementShortName">axi_in_use_vmu</obj_property>
+         <obj_property name="ObjectShortName">axi_in_use_vmu</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/axi_in_use_mpu">
+         <obj_property name="ElementShortName">axi_in_use_mpu</obj_property>
+         <obj_property name="ObjectShortName">axi_in_use_mpu</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/MPU_VMU_FIFO_Full">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Full</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/MPU_VMU_FIFO_Write">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Write</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/MPU_VMU_FIFO_WriteData">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_WriteData[32:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_WriteData[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/msg_reg">
+         <obj_property name="ElementShortName">msg_reg[63:0]</obj_property>
+         <obj_property name="ObjectShortName">msg_reg[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/old_temp_prop">
+         <obj_property name="ElementShortName">old_temp_prop[31:0]</obj_property>
+         <obj_property name="ObjectShortName">old_temp_prop[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/old_prop">
+         <obj_property name="ElementShortName">old_prop[31:0]</obj_property>
+         <obj_property name="ObjectShortName">old_prop[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/new_value">
+         <obj_property name="ElementShortName">new_value[31:0]</obj_property>
+         <obj_property name="ObjectShortName">new_value[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/temp_result">
+         <obj_property name="ElementShortName">temp_result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_result[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/result">
+         <obj_property name="ElementShortName">result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/update">
+         <obj_property name="ElementShortName">update</obj_property>
+         <obj_property name="ObjectShortName">update</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/send">
+         <obj_property name="ElementShortName">send</obj_property>
+         <obj_property name="ObjectShortName">send</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/store_read_data">
+         <obj_property name="ElementShortName">store_read_data[255:0]</obj_property>
+         <obj_property name="ObjectShortName">store_read_data[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/edge_index">
+         <obj_property name="ElementShortName">edge_index[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_index[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/edge_degree">
+         <obj_property name="ElementShortName">edge_degree[29:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_degree[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/start_send">
+         <obj_property name="ElementShortName">start_send</obj_property>
+         <obj_property name="ObjectShortName">start_send</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/vertex">
+         <obj_property name="ElementShortName">vertex[1:0][127:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex[1:0][127:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MPU/which_vertex">
+         <obj_property name="ElementShortName">which_vertex</obj_property>
+         <obj_property name="ObjectShortName">which_vertex</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/previous_addr">
+         <obj_property name="ElementShortName">previous_addr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">previous_addr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MPU/state">
+         <obj_property name="ElementShortName">state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_top/AXI_CHECK/axi_checker_i/axi_engine_0/m_axi">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/tb_top/AXI_CHECK/axi_checker_i/axi_engine_0/m_axi.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="ElementShortName">m_axi</obj_property>
-      <obj_property name="ObjectShortName">m_axi</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject type="group" fp_name="group789">
+      <obj_property name="label">vmu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/MPU_VMU_FIFO_Empty">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Empty</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Empty</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/MPU_VMU_FIFO_ReadData">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_ReadData[32:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_ReadData[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/MPU_VMU_FIFO_Read">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Read</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Read</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/MPU_VMU_FIFO_Read_Valid">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Read_Valid</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Read_Valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/start_rd">
+         <obj_property name="ElementShortName">start_rd</obj_property>
+         <obj_property name="ObjectShortName">start_rd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/read_addr">
+         <obj_property name="ElementShortName">read_addr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">read_addr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/read_data">
+         <obj_property name="ElementShortName">read_data[255:0]</obj_property>
+         <obj_property name="ObjectShortName">read_data[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/end_rd">
+         <obj_property name="ElementShortName">end_rd</obj_property>
+         <obj_property name="ObjectShortName">end_rd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/rburst">
+         <obj_property name="ElementShortName">rburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/axi_in_use_mpu">
+         <obj_property name="ElementShortName">axi_in_use_mpu</obj_property>
+         <obj_property name="ObjectShortName">axi_in_use_mpu</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/axi_in_use_vmu">
+         <obj_property name="ElementShortName">axi_in_use_vmu</obj_property>
+         <obj_property name="ObjectShortName">axi_in_use_vmu</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/FIFO_full_mgu_a">
+         <obj_property name="ElementShortName">FIFO_full_mgu_a</obj_property>
+         <obj_property name="ObjectShortName">FIFO_full_mgu_a</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/FIFO_data_mgu_a">
+         <obj_property name="ElementShortName">FIFO_data_mgu_a[93:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_data_mgu_a[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/FIFO_write_mgu_a">
+         <obj_property name="ElementShortName">FIFO_write_mgu_a</obj_property>
+         <obj_property name="ObjectShortName">FIFO_write_mgu_a</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/FIFO_full_mgu_b">
+         <obj_property name="ElementShortName">FIFO_full_mgu_b</obj_property>
+         <obj_property name="ObjectShortName">FIFO_full_mgu_b</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/FIFO_data_mgu_b">
+         <obj_property name="ElementShortName">FIFO_data_mgu_b[93:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_data_mgu_b[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/FIFO_write_mgu_b">
+         <obj_property name="ElementShortName">FIFO_write_mgu_b</obj_property>
+         <obj_property name="ObjectShortName">FIFO_write_mgu_b</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/RAM_address_a">
+         <obj_property name="ElementShortName">RAM_address_a[12:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_address_a[12:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/RAM_din_a">
+         <obj_property name="ElementShortName">RAM_din_a[71:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_din_a[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/RAM_dout_a">
+         <obj_property name="ElementShortName">RAM_dout_a[71:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_dout_a[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/WrEnable_a">
+         <obj_property name="ElementShortName">WrEnable_a</obj_property>
+         <obj_property name="ObjectShortName">WrEnable_a</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/RAM_enable_a">
+         <obj_property name="ElementShortName">RAM_enable_a</obj_property>
+         <obj_property name="ObjectShortName">RAM_enable_a</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/store_read_data">
+         <obj_property name="ElementShortName">store_read_data[7:0][255:0]</obj_property>
+         <obj_property name="ObjectShortName">store_read_data[7:0][255:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/active_read_data">
+         <obj_property name="ElementShortName">active_read_data[255:0]</obj_property>
+         <obj_property name="ObjectShortName">active_read_data[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_RAM_address">
+         <obj_property name="ElementShortName">next_RAM_address[12:0]</obj_property>
+         <obj_property name="ObjectShortName">next_RAM_address[12:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/LOCK">
+         <obj_property name="ElementShortName">LOCK</obj_property>
+         <obj_property name="ObjectShortName">LOCK</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/UNLOCK">
+         <obj_property name="ElementShortName">UNLOCK</obj_property>
+         <obj_property name="ObjectShortName">UNLOCK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/vertex">
+         <obj_property name="ElementShortName">vertex[1:0][127:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex[1:0][127:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/prop">
+         <obj_property name="ElementShortName">prop[1:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">prop[1:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/edge_index">
+         <obj_property name="ElementShortName">edge_index[1:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_index[1:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/edge_degree">
+         <obj_property name="ElementShortName">edge_degree[1:0][29:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_degree[1:0][29:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/state_a">
+         <obj_property name="ElementShortName">state_a[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state_a[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/state_b">
+         <obj_property name="ElementShortName">state_b[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state_b[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/total_active_blocks">
+         <obj_property name="ElementShortName">total_active_blocks[7:0]</obj_property>
+         <obj_property name="ObjectShortName">total_active_blocks[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_total_active_blocks">
+         <obj_property name="ElementShortName">next_total_active_blocks[7:0]</obj_property>
+         <obj_property name="ObjectShortName">next_total_active_blocks[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/counter">
+         <obj_property name="ElementShortName">counter[7:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_counter">
+         <obj_property name="ElementShortName">next_counter[7:0]</obj_property>
+         <obj_property name="ObjectShortName">next_counter[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/start_check">
+         <obj_property name="ElementShortName">start_check</obj_property>
+         <obj_property name="ObjectShortName">start_check</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/new_active">
+         <obj_property name="ElementShortName">new_active</obj_property>
+         <obj_property name="ObjectShortName">new_active</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/block_address">
+         <obj_property name="ElementShortName">block_address[9:0]</obj_property>
+         <obj_property name="ObjectShortName">block_address[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/block_group_address">
+         <obj_property name="ElementShortName">block_group_address[6:0]</obj_property>
+         <obj_property name="ObjectShortName">block_group_address[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/vertex_bit_address">
+         <obj_property name="ElementShortName">vertex_bit_address[5:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex_bit_address[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/temp_block_update">
+         <obj_property name="ElementShortName">temp_block_update[71:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_block_update[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/vertex_address">
+         <obj_property name="ElementShortName">vertex_address[32:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex_address[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_group">
+         <obj_property name="ElementShortName">next_group[1:0]</obj_property>
+         <obj_property name="ObjectShortName">next_group[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/previous_group">
+         <obj_property name="ElementShortName">previous_group[1:0]</obj_property>
+         <obj_property name="ObjectShortName">previous_group[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/group">
+         <obj_property name="ElementShortName">group[6:0]</obj_property>
+         <obj_property name="ObjectShortName">group[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_vertex_b">
+         <obj_property name="ElementShortName">next_vertex_b[6:0]</obj_property>
+         <obj_property name="ObjectShortName">next_vertex_b[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/vertex_b">
+         <obj_property name="ElementShortName">vertex_b[5:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex_b[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_vertex_a">
+         <obj_property name="ElementShortName">next_vertex_a[6:0]</obj_property>
+         <obj_property name="ObjectShortName">next_vertex_a[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/vertex_a">
+         <obj_property name="ElementShortName">vertex_a[5:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex_a[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_addr">
+         <obj_property name="ElementShortName">next_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">next_addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_addr_4">
+         <obj_property name="ElementShortName">next_addr_4[5:0]</obj_property>
+         <obj_property name="ObjectShortName">next_addr_4[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/read_counter">
+         <obj_property name="ElementShortName">read_counter[2:0]</obj_property>
+         <obj_property name="ObjectShortName">read_counter[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_read_counter">
+         <obj_property name="ElementShortName">next_read_counter[3:0]</obj_property>
+         <obj_property name="ObjectShortName">next_read_counter[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/temp_block">
+         <obj_property name="ElementShortName">temp_block[71:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_block[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/temp_block_partition">
+         <obj_property name="ElementShortName">temp_block_partition[71:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_block_partition[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/start_partition">
+         <obj_property name="ElementShortName">start_partition</obj_property>
+         <obj_property name="ObjectShortName">start_partition</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/partition_count">
+         <obj_property name="ElementShortName">partition_count[2:0]</obj_property>
+         <obj_property name="ObjectShortName">partition_count[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_VMU/next_partition_count">
+         <obj_property name="ElementShortName">next_partition_count[3:0]</obj_property>
+         <obj_property name="ObjectShortName">next_partition_count[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_VMU/have_read">
+         <obj_property name="ElementShortName">have_read</obj_property>
+         <obj_property name="ObjectShortName">have_read</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/d_start_rd">
-      <obj_property name="ElementShortName">d_start_rd</obj_property>
-      <obj_property name="ObjectShortName">d_start_rd</obj_property>
+   <wvobject type="group" fp_name="group903">
+      <obj_property name="label">top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_top/resetn">
+         <obj_property name="ElementShortName">resetn</obj_property>
+         <obj_property name="ObjectShortName">resetn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/start_rd_v">
+         <obj_property name="ElementShortName">start_rd_v</obj_property>
+         <obj_property name="ObjectShortName">start_rd_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/start_wr_v">
+         <obj_property name="ElementShortName">start_wr_v</obj_property>
+         <obj_property name="ObjectShortName">start_wr_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/start_rd_e">
+         <obj_property name="ElementShortName">start_rd_e</obj_property>
+         <obj_property name="ObjectShortName">start_rd_e</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/start_wr_e">
+         <obj_property name="ElementShortName">start_wr_e</obj_property>
+         <obj_property name="ObjectShortName">start_wr_e</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/end_rd_v">
+         <obj_property name="ElementShortName">end_rd_v</obj_property>
+         <obj_property name="ObjectShortName">end_rd_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/end_wr_v">
+         <obj_property name="ElementShortName">end_wr_v</obj_property>
+         <obj_property name="ObjectShortName">end_wr_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/end_rd_e">
+         <obj_property name="ElementShortName">end_rd_e</obj_property>
+         <obj_property name="ObjectShortName">end_rd_e</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/end_wr_e">
+         <obj_property name="ElementShortName">end_wr_e</obj_property>
+         <obj_property name="ObjectShortName">end_wr_e</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/raddr_v">
+         <obj_property name="ElementShortName">raddr_v[32:0]</obj_property>
+         <obj_property name="ObjectShortName">raddr_v[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/waddr_v">
+         <obj_property name="ElementShortName">waddr_v[32:0]</obj_property>
+         <obj_property name="ObjectShortName">waddr_v[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/raddr_e">
+         <obj_property name="ElementShortName">raddr_e[32:0]</obj_property>
+         <obj_property name="ObjectShortName">raddr_e[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/waddr_e">
+         <obj_property name="ElementShortName">waddr_e[32:0]</obj_property>
+         <obj_property name="ObjectShortName">waddr_e[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/rdata_v">
+         <obj_property name="ElementShortName">rdata_v[255:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata_v[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/wdata_v">
+         <obj_property name="ElementShortName">wdata_v[255:0]</obj_property>
+         <obj_property name="ObjectShortName">wdata_v[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/rdata_e">
+         <obj_property name="ElementShortName">rdata_e[511:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata_e[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/wdata_e">
+         <obj_property name="ElementShortName">wdata_e[511:0]</obj_property>
+         <obj_property name="ObjectShortName">wdata_e[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/vertex_axi_in_use">
+         <obj_property name="ElementShortName">vertex_axi_in_use</obj_property>
+         <obj_property name="ObjectShortName">vertex_axi_in_use</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/edge_axi_in_use">
+         <obj_property name="ElementShortName">edge_axi_in_use</obj_property>
+         <obj_property name="ObjectShortName">edge_axi_in_use</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/first_message">
+         <obj_property name="ElementShortName">first_message[63:0]</obj_property>
+         <obj_property name="ObjectShortName">first_message[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_read_v">
+         <obj_property name="ElementShortName">D_read_v</obj_property>
+         <obj_property name="ObjectShortName">D_read_v</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_raddr_v">
+         <obj_property name="ElementShortName">D_raddr_v[32:0]</obj_property>
+         <obj_property name="ObjectShortName">D_raddr_v[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_rdata_v">
+         <obj_property name="ElementShortName">D_rdata_v[255:0]</obj_property>
+         <obj_property name="ObjectShortName">D_rdata_v[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_end_read_v">
+         <obj_property name="ElementShortName">D_end_read_v</obj_property>
+         <obj_property name="ObjectShortName">D_end_read_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_write_v">
+         <obj_property name="ElementShortName">D_write_v</obj_property>
+         <obj_property name="ObjectShortName">D_write_v</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_waddr_v">
+         <obj_property name="ElementShortName">D_waddr_v[32:0]</obj_property>
+         <obj_property name="ObjectShortName">D_waddr_v[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_wdata_v">
+         <obj_property name="ElementShortName">D_wdata_v[255:0]</obj_property>
+         <obj_property name="ObjectShortName">D_wdata_v[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_end_write_v">
+         <obj_property name="ElementShortName">D_end_write_v</obj_property>
+         <obj_property name="ObjectShortName">D_end_write_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_read_e">
+         <obj_property name="ElementShortName">D_read_e</obj_property>
+         <obj_property name="ObjectShortName">D_read_e</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_raddr_e">
+         <obj_property name="ElementShortName">D_raddr_e[32:0]</obj_property>
+         <obj_property name="ObjectShortName">D_raddr_e[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_rdata_e">
+         <obj_property name="ElementShortName">D_rdata_e[511:0]</obj_property>
+         <obj_property name="ObjectShortName">D_rdata_e[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_end_read_e">
+         <obj_property name="ElementShortName">D_end_read_e</obj_property>
+         <obj_property name="ObjectShortName">D_end_read_e</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_write_e">
+         <obj_property name="ElementShortName">D_write_e</obj_property>
+         <obj_property name="ObjectShortName">D_write_e</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_waddr_e">
+         <obj_property name="ElementShortName">D_waddr_e[32:0]</obj_property>
+         <obj_property name="ObjectShortName">D_waddr_e[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/D_wdata_e">
+         <obj_property name="ElementShortName">D_wdata_e[511:0]</obj_property>
+         <obj_property name="ObjectShortName">D_wdata_e[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/D_end_write_e">
+         <obj_property name="ElementShortName">D_end_write_e</obj_property>
+         <obj_property name="ObjectShortName">D_end_write_e</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_read">
+         <obj_property name="ElementShortName">MPU_read</obj_property>
+         <obj_property name="ObjectShortName">MPU_read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_raddr">
+         <obj_property name="ElementShortName">MPU_raddr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_raddr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_rburst">
+         <obj_property name="ElementShortName">MPU_rburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_rburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_rdata">
+         <obj_property name="ElementShortName">MPU_rdata[255:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_rdata[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_end_read">
+         <obj_property name="ElementShortName">MPU_end_read</obj_property>
+         <obj_property name="ObjectShortName">MPU_end_read</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_write">
+         <obj_property name="ElementShortName">MPU_write</obj_property>
+         <obj_property name="ObjectShortName">MPU_write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_waddr">
+         <obj_property name="ElementShortName">MPU_waddr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_waddr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_wburst">
+         <obj_property name="ElementShortName">MPU_wburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_wburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_wdata">
+         <obj_property name="ElementShortName">MPU_wdata[255:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_wdata[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_end_write">
+         <obj_property name="ElementShortName">MPU_end_write</obj_property>
+         <obj_property name="ObjectShortName">MPU_end_write</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_read">
+         <obj_property name="ElementShortName">VMU_read</obj_property>
+         <obj_property name="ObjectShortName">VMU_read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_raddr">
+         <obj_property name="ElementShortName">VMU_raddr[32:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_raddr[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_rdata">
+         <obj_property name="ElementShortName">VMU_rdata[255:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_rdata[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_end_read">
+         <obj_property name="ElementShortName">VMU_end_read</obj_property>
+         <obj_property name="ObjectShortName">VMU_end_read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_rburst">
+         <obj_property name="ElementShortName">VMU_rburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_rburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/vmu_using_axi">
+         <obj_property name="ElementShortName">vmu_using_axi</obj_property>
+         <obj_property name="ObjectShortName">vmu_using_axi</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/mpu_using_axi">
+         <obj_property name="ElementShortName">mpu_using_axi</obj_property>
+         <obj_property name="ObjectShortName">mpu_using_axi</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MGU_read">
+         <obj_property name="ElementShortName">MGU_read</obj_property>
+         <obj_property name="ObjectShortName">MGU_read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MGU_raddr">
+         <obj_property name="ElementShortName">MGU_raddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MGU_raddr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MGU_rdata">
+         <obj_property name="ElementShortName">MGU_rdata[511:0]</obj_property>
+         <obj_property name="ObjectShortName">MGU_rdata[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MGU_end_read">
+         <obj_property name="ElementShortName">MGU_end_read</obj_property>
+         <obj_property name="ObjectShortName">MGU_end_read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/RAM_address_a">
+         <obj_property name="ElementShortName">RAM_address_a[12:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_address_a[12:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/RAM_din_a">
+         <obj_property name="ElementShortName">RAM_din_a[71:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_din_a[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/RAM_dout_a">
+         <obj_property name="ElementShortName">RAM_dout_a[71:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_dout_a[71:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/WrEnable_a">
+         <obj_property name="ElementShortName">WrEnable_a</obj_property>
+         <obj_property name="ObjectShortName">WrEnable_a</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/enable_a">
+         <obj_property name="ElementShortName">enable_a</obj_property>
+         <obj_property name="ObjectShortName">enable_a</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/offset">
+         <obj_property name="ElementShortName">offset[31:0]</obj_property>
+         <obj_property name="ObjectShortName">offset[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/rburst">
+         <obj_property name="ElementShortName">rburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/wburst">
+         <obj_property name="ElementShortName">wburst[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wburst[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/rburst_edge">
+         <obj_property name="ElementShortName">rburst_edge[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rburst_edge[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/wburst_edge">
+         <obj_property name="ElementShortName">wburst_edge[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wburst_edge[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/even_edge">
+         <obj_property name="ElementShortName">even_edge[31:0]</obj_property>
+         <obj_property name="ObjectShortName">even_edge[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/first_message_gf">
+         <obj_property name="ElementShortName">first_message_gf[63:0]</obj_property>
+         <obj_property name="ObjectShortName">first_message_gf[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/vertex_address1">
+         <obj_property name="ElementShortName">vertex_address1[32:0]</obj_property>
+         <obj_property name="ObjectShortName">vertex_address1[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/update_value">
+         <obj_property name="ElementShortName">update_value[30:0]</obj_property>
+         <obj_property name="ObjectShortName">update_value[30:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/prop">
+         <obj_property name="ElementShortName">prop[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prop[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/edge_address">
+         <obj_property name="ElementShortName">edge_address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_address[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/edge_degree">
+         <obj_property name="ElementShortName">edge_degree[29:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_degree[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/weight">
+         <obj_property name="ElementShortName">weight[15:0]</obj_property>
+         <obj_property name="ObjectShortName">weight[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/neighbor">
+         <obj_property name="ElementShortName">neighbor[47:0]</obj_property>
+         <obj_property name="ObjectShortName">neighbor[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/new_value">
+         <obj_property name="ElementShortName">new_value[30:0]</obj_property>
+         <obj_property name="ObjectShortName">new_value[30:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/new_address">
+         <obj_property name="ElementShortName">new_address[32:0]</obj_property>
+         <obj_property name="ObjectShortName">new_address[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/prop2">
+         <obj_property name="ElementShortName">prop2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prop2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/edge_address2">
+         <obj_property name="ElementShortName">edge_address2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_address2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/edge_degree2">
+         <obj_property name="ElementShortName">edge_degree2[29:0]</obj_property>
+         <obj_property name="ObjectShortName">edge_degree2[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/gf_cycles">
+         <obj_property name="ElementShortName">gf_cycles[31:0]</obj_property>
+         <obj_property name="ObjectShortName">gf_cycles[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/Message_FIFO_Empty">
+         <obj_property name="ElementShortName">Message_FIFO_Empty</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_Empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/Message_FIFO_Full">
+         <obj_property name="ElementShortName">Message_FIFO_Full</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_Full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/Message_FIFO_Read">
+         <obj_property name="ElementShortName">Message_FIFO_Read</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_Read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/Message_FIFO_ReadData">
+         <obj_property name="ElementShortName">Message_FIFO_ReadData[63:0]</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_ReadData[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/Message_FIFO_Read_Valid">
+         <obj_property name="ElementShortName">Message_FIFO_Read_Valid</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_Read_Valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/Message_FIFO_Write">
+         <obj_property name="ElementShortName">Message_FIFO_Write</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_Write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/Message_FIFO_WriteData">
+         <obj_property name="ElementShortName">Message_FIFO_WriteData[63:0]</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_WriteData[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/Message_FIFO_Write_First">
+         <obj_property name="ElementShortName">Message_FIFO_Write_First</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_Write_First</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/Message_FIFO_WriteData_First">
+         <obj_property name="ElementShortName">Message_FIFO_WriteData_First[63:0]</obj_property>
+         <obj_property name="ObjectShortName">Message_FIFO_WriteData_First[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_VMU_FIFO_Empty">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Empty</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_VMU_FIFO_Full">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Full</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_VMU_FIFO_Read">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Read</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_VMU_FIFO_ReadData">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_ReadData[32:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_ReadData[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_VMU_FIFO_Read_Valid">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Read_Valid</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Read_Valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/MPU_VMU_FIFO_Write">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_Write</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_Write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/MPU_VMU_FIFO_WriteData">
+         <obj_property name="ElementShortName">MPU_VMU_FIFO_WriteData[32:0]</obj_property>
+         <obj_property name="ObjectShortName">MPU_VMU_FIFO_WriteData[32:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_A_Empty">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_Empty</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_Empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_A_Full">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_Full</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_Full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_A_Read">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_Read</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_Read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_to_MGU_FIFO_A_ReadData">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_ReadData[93:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_ReadData[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_A_Read_Valid">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_Read_Valid</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_Read_Valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_A_Write">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_Write</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_Write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_to_MGU_FIFO_A_WriteData">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_A_WriteData[93:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_A_WriteData[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_B_Empty">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_Empty</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_Empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_B_Full">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_Full</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_Full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_B_Read">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_Read</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_Read</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_to_MGU_FIFO_B_ReadData">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_ReadData[93:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_ReadData[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_B_Read_Valid">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_Read_Valid</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_Read_Valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/VMU_to_MGU_FIFO_B_Write">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_Write</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_Write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/VMU_to_MGU_FIFO_B_WriteData">
+         <obj_property name="ElementShortName">VMU_to_MGU_FIFO_B_WriteData[93:0]</obj_property>
+         <obj_property name="ObjectShortName">VMU_to_MGU_FIFO_B_WriteData[93:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/d_start_wr">
-      <obj_property name="ElementShortName">d_start_wr</obj_property>
-      <obj_property name="ObjectShortName">d_start_wr</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/d_end_wr">
-      <obj_property name="ElementShortName">d_end_wr</obj_property>
-      <obj_property name="ObjectShortName">d_end_wr</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/d_end_rd">
-      <obj_property name="ElementShortName">d_end_rd</obj_property>
-      <obj_property name="ObjectShortName">d_end_rd</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/d_raddr">
-      <obj_property name="ElementShortName">d_raddr[32:0]</obj_property>
-      <obj_property name="ObjectShortName">d_raddr[32:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/d_waddr">
-      <obj_property name="ElementShortName">d_waddr[32:0]</obj_property>
-      <obj_property name="ObjectShortName">d_waddr[32:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/d_wdata">
-      <obj_property name="ElementShortName">d_wdata[255:0]</obj_property>
-      <obj_property name="ObjectShortName">d_wdata[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/d_rdata">
-      <obj_property name="ElementShortName">d_rdata[255:0]</obj_property>
-      <obj_property name="ObjectShortName">d_rdata[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_top/AXI_CHECK/axi_checker_i/axi_engine_1/m_axi">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/tb_top/AXI_CHECK/axi_checker_i/axi_engine_1/m_axi.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="ElementShortName">m_axi</obj_property>
-      <obj_property name="ObjectShortName">m_axi</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/update">
-      <obj_property name="ElementShortName">update[63:0]</obj_property>
-      <obj_property name="ObjectShortName">update[63:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/update_ready">
-      <obj_property name="ElementShortName">update_ready</obj_property>
-      <obj_property name="ObjectShortName">update_ready</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/update_resp">
-      <obj_property name="ElementShortName">update_resp</obj_property>
-      <obj_property name="ObjectShortName">update_resp</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/read_addr">
-      <obj_property name="ElementShortName">read_addr[32:0]</obj_property>
-      <obj_property name="ObjectShortName">read_addr[32:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/read_data">
-      <obj_property name="ElementShortName">read_data[255:0]</obj_property>
-      <obj_property name="ObjectShortName">read_data[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/write_addr">
-      <obj_property name="ElementShortName">write_addr[32:0]</obj_property>
-      <obj_property name="ObjectShortName">write_addr[32:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/write_data">
-      <obj_property name="ElementShortName">write_data[255:0]</obj_property>
-      <obj_property name="ObjectShortName">write_data[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/start_rd">
-      <obj_property name="ElementShortName">start_rd</obj_property>
-      <obj_property name="ObjectShortName">start_rd</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/start_wr">
-      <obj_property name="ElementShortName">start_wr</obj_property>
-      <obj_property name="ObjectShortName">start_wr</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/end_rd">
-      <obj_property name="ElementShortName">end_rd</obj_property>
-      <obj_property name="ObjectShortName">end_rd</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/end_wr">
-      <obj_property name="ElementShortName">end_wr</obj_property>
-      <obj_property name="ObjectShortName">end_wr</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/update_reg">
-      <obj_property name="ElementShortName">update_reg[63:0]</obj_property>
-      <obj_property name="ObjectShortName">update_reg[63:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/result">
-      <obj_property name="ElementShortName">result[31:0]</obj_property>
-      <obj_property name="ObjectShortName">result[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/store_read_data">
-      <obj_property name="ElementShortName">store_read_data[255:0]</obj_property>
-      <obj_property name="ObjectShortName">store_read_data[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/state">
-      <obj_property name="ElementShortName">state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/state_a">
-      <obj_property name="ElementShortName">state_a[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state_a[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/active">
-      <obj_property name="ElementShortName">active</obj_property>
-      <obj_property name="ObjectShortName">active</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/old_temp_prop">
-      <obj_property name="ElementShortName">old_temp_prop[31:0]</obj_property>
-      <obj_property name="ObjectShortName">old_temp_prop[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/old_prop">
-      <obj_property name="ElementShortName">old_prop[31:0]</obj_property>
-      <obj_property name="ObjectShortName">old_prop[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/u_MPU/new_value">
-      <obj_property name="ElementShortName">new_value[31:0]</obj_property>
-      <obj_property name="ObjectShortName">new_value[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/temp_result">
-      <obj_property name="ElementShortName">temp_result</obj_property>
-      <obj_property name="ObjectShortName">temp_result</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/FIFO_data">
-      <obj_property name="ElementShortName">FIFO_data[95:0]</obj_property>
-      <obj_property name="ObjectShortName">FIFO_data[95:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/FIFO_full">
-      <obj_property name="ElementShortName">FIFO_full</obj_property>
-      <obj_property name="ObjectShortName">FIFO_full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/FIFO_ready">
-      <obj_property name="ElementShortName">FIFO_ready</obj_property>
-      <obj_property name="ObjectShortName">FIFO_ready</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/u_MPU/inst_ReductionEngine/BFS_Check">
-      <obj_property name="ElementShortName">BFS_Check</obj_property>
-      <obj_property name="ObjectShortName">BFS_Check</obj_property>
+   <wvobject type="group" fp_name="group2585">
+      <obj_property name="label">mgu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/FIFO_data_msg">
+         <obj_property name="ElementShortName">FIFO_data_msg[63:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_data_msg[63:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_write_msg">
+         <obj_property name="ElementShortName">FIFO_write_msg</obj_property>
+         <obj_property name="ObjectShortName">FIFO_write_msg</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_full_msg">
+         <obj_property name="ElementShortName">FIFO_full_msg</obj_property>
+         <obj_property name="ObjectShortName">FIFO_full_msg</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/FIFO_data_vmu_a">
+         <obj_property name="ElementShortName">FIFO_data_vmu_a[93:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_data_vmu_a[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_read_vmu_a">
+         <obj_property name="ElementShortName">FIFO_read_vmu_a</obj_property>
+         <obj_property name="ObjectShortName">FIFO_read_vmu_a</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_empty_vmu_a">
+         <obj_property name="ElementShortName">FIFO_empty_vmu_a</obj_property>
+         <obj_property name="ObjectShortName">FIFO_empty_vmu_a</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_read_valid_vmu_a">
+         <obj_property name="ElementShortName">FIFO_read_valid_vmu_a</obj_property>
+         <obj_property name="ObjectShortName">FIFO_read_valid_vmu_a</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/FIFO_data_vmu_b">
+         <obj_property name="ElementShortName">FIFO_data_vmu_b[93:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_data_vmu_b[93:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_read_vmu_b">
+         <obj_property name="ElementShortName">FIFO_read_vmu_b</obj_property>
+         <obj_property name="ObjectShortName">FIFO_read_vmu_b</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_empty_vmu_b">
+         <obj_property name="ElementShortName">FIFO_empty_vmu_b</obj_property>
+         <obj_property name="ObjectShortName">FIFO_empty_vmu_b</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/FIFO_read_valid_vmu_b">
+         <obj_property name="ElementShortName">FIFO_read_valid_vmu_b</obj_property>
+         <obj_property name="ObjectShortName">FIFO_read_valid_vmu_b</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/read_addr">
+         <obj_property name="ElementShortName">read_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">read_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/read_data">
+         <obj_property name="ElementShortName">read_data[511:0]</obj_property>
+         <obj_property name="ObjectShortName">read_data[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/start_rd">
+         <obj_property name="ElementShortName">start_rd</obj_property>
+         <obj_property name="ObjectShortName">start_rd</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/end_rd">
+         <obj_property name="ElementShortName">end_rd</obj_property>
+         <obj_property name="ObjectShortName">end_rd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/store_read_data">
+         <obj_property name="ElementShortName">store_read_data[511:0]</obj_property>
+         <obj_property name="ObjectShortName">store_read_data[511:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/current_edge">
+         <obj_property name="ElementShortName">current_edge[2:0]</obj_property>
+         <obj_property name="ObjectShortName">current_edge[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/next_edge">
+         <obj_property name="ElementShortName">next_edge[3:0]</obj_property>
+         <obj_property name="ObjectShortName">next_edge[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/completed_edges">
+         <obj_property name="ElementShortName">completed_edges[29:0]</obj_property>
+         <obj_property name="ObjectShortName">completed_edges[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/completed_edges_plusone">
+         <obj_property name="ElementShortName">completed_edges_plusone[29:0]</obj_property>
+         <obj_property name="ObjectShortName">completed_edges_plusone[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/total_edges">
+         <obj_property name="ElementShortName">total_edges[29:0]</obj_property>
+         <obj_property name="ObjectShortName">total_edges[29:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/new_value">
+         <obj_property name="ElementShortName">new_value[31:0]</obj_property>
+         <obj_property name="ObjectShortName">new_value[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/prop">
+         <obj_property name="ElementShortName">prop[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prop[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/weight">
+         <obj_property name="ElementShortName">weight[7:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">weight[7:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/neighbor">
+         <obj_property name="ElementShortName">neighbor[7:0][47:0]</obj_property>
+         <obj_property name="ObjectShortName">neighbor[7:0][47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/active_weight">
+         <obj_property name="ElementShortName">active_weight[15:0]</obj_property>
+         <obj_property name="ObjectShortName">active_weight[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/active_neighbor">
+         <obj_property name="ElementShortName">active_neighbor[47:0]</obj_property>
+         <obj_property name="ObjectShortName">active_neighbor[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/next_addr">
+         <obj_property name="ElementShortName">next_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">next_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/u_MGU/fifo_a">
+         <obj_property name="ElementShortName">fifo_a</obj_property>
+         <obj_property name="ObjectShortName">fifo_a</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/u_MGU/state">
+         <obj_property name="ElementShortName">state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

@@ -1,0 +1,58 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/austin01/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L blk_mem_gen_v8_4_5 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/axi_engine.v" Line 22. Module axi_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/wr_engine.v" Line 22. Module wr_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/rd_engine.v" Line 22. Module rd_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/axi_engine.v" Line 22. Module axi_engine(DATA_WIDTH=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/wr_engine.v" Line 22. Module wr_engine(DATA_WIDTH=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/rd_engine.v" Line 22. Module rd_engine(DATA_WIDTH=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/axi_engine.v" Line 22. Module axi_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/wr_engine.v" Line 22. Module wr_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/rd_engine.v" Line 22. Module rd_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/axi_engine.v" Line 22. Module axi_engine(DATA_WIDTH=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/wr_engine.v" Line 22. Module wr_engine(DATA_WIDTH=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/austin01/vivado/AXIChecker/AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/rd_engine.v" Line 22. Module rd_engine(DATA_WIDTH=512) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling module xil_defaultlib.wr_engine
+Compiling module xil_defaultlib.rd_engine
+Compiling module xil_defaultlib.axi_engine
+Compiling module xil_defaultlib.axi_checker_AXI_Engine_0_2
+Compiling module xil_defaultlib.wr_engine(DATA_WIDTH=512)
+Compiling module xil_defaultlib.rd_engine(DATA_WIDTH=512)
+Compiling module xil_defaultlib.axi_engine(DATA_WIDTH=512)
+Compiling module xil_defaultlib.axi_checker_AXI_Engine_1_1
+Compiling module xilinx_vip.axi_vip_axi4pc(WADDR_WIDTH=33,RA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_ADDR_WIDTH=33,C...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_INTERF...
+Compiling module xil_defaultlib.axi_checker_axi_vip_0_0
+Compiling module xilinx_vip.axi_vip_axi4pc(WADDR_WIDTH=33,RA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_ADDR_WIDTH=33,C...
+Compiling module axi_vip_v1_1_12.axi_vip_v1_1_12_top(C_AXI_INTERF...
+Compiling module xil_defaultlib.axi_checker_axi_vip_1_0
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="vir...
+Compiling module xil_defaultlib.axi_checker_blk_mem_gen_0_0
+Compiling module xil_defaultlib.axi_checker
+Compiling module xil_defaultlib.axi_checker_wrapper
+Compiling module xil_defaultlib.ReductionEngine(EDegreeWidth=30)
+Compiling module xil_defaultlib.MPU
+Compiling module xil_defaultlib.VMU
+Compiling module xil_defaultlib.MGU
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav

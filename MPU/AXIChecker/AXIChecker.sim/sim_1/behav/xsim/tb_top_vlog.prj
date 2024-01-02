@@ -2,16 +2,24 @@
 sv xil_defaultlib  --include "../../../../AXIChecker.gen/sources_1/bd/axi_checker/ipshared/ec67/hdl" --include "/home/austin01/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_vip_0_0/sim/axi_checker_axi_vip_0_0_pkg.sv" \
 "../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_vip_0_0/sim/axi_checker_axi_vip_0_0.sv" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_vip_1_0/sim/axi_checker_axi_vip_1_0_pkg.sv" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_vip_1_0/sim/axi_checker_axi_vip_1_0.sv" \
 
 verilog xil_defaultlib  --include "../../../../AXIChecker.gen/sources_1/bd/axi_checker/ipshared/ec67/hdl" --include "/home/austin01/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_crossbar_0_0/sim/axi_checker_axi_crossbar_0_0.v" \
-"../../../../AXIChecker.ip_user_files/bd/axi_checker/ipshared/7913/rd_engine.v" \
-"../../../../AXIChecker.ip_user_files/bd/axi_checker/ipshared/7913/wr_engine.v" \
-"../../../../AXIChecker.ip_user_files/bd/axi_checker/ipshared/7913/axi_engine.v" \
-"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_engine_0_0/sim/axi_checker_axi_engine_0_0.v" \
-"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_axi_engine_0_1/sim/axi_checker_axi_engine_0_1.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/rd_engine.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/wr_engine.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ipshared/40fd/axi_engine.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_AXI_Engine_0_2/sim/axi_checker_AXI_Engine_0_2.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_AXI_Engine_1_1/sim/axi_checker_AXI_Engine_1_1.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_blk_mem_gen_0_0/sim/axi_checker_blk_mem_gen_0_0.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_fifo_generator_0_0/sim/axi_checker_fifo_generator_0_0.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_fifo_generator_0_1/sim/axi_checker_fifo_generator_0_1.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_fifo_generator_1_0/sim/axi_checker_fifo_generator_1_0.v" \
+"../../../../AXIChecker.ip_user_files/bd/axi_checker/ip/axi_checker_fifo_generator_0_2/sim/axi_checker_fifo_generator_0_2.v" \
 "../../../../AXIChecker.ip_user_files/bd/axi_checker/sim/axi_checker.v" \
+"../../../../AXIChecker.srcs/sources_1/imports/MGU.v" \
 "../../../../AXIChecker.srcs/sources_1/new/MPU.v" \
+"../../../../AXIChecker.srcs/sources_1/imports/VMU.v" \
 "../../../../AXIChecker.gen/sources_1/bd/axi_checker/hdl/axi_checker_wrapper.v" \
 
 sv xil_defaultlib  --include "../../../../AXIChecker.gen/sources_1/bd/axi_checker/ipshared/ec67/hdl" --include "/home/austin01/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
